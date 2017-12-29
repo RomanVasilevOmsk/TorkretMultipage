@@ -1,0 +1,129 @@
+ul
+  display block
+  padding 0
+  list-style none
+  z-index 99
+  font-size 17px
+  text-transform uppercase
+  font-weight 400
+
+  &:after
+    display block
+    content ' '
+    clear both
+    float none
+
+ul.menu
+  margin 38px 0 0 -11px
+  @media (max-width: 768px)
+    margin 0
+
+ul.menu > li
+  float left
+  position relative
+  @media (max-width: 768px)
+    height 100%
+    //max-width 110px
+    letter-spacing 0.1em
+    display -webkit-flex
+    display flex
+    justify-content center
+    align-items center
+    position relative
+    border-bottom 1px solid #fff
+    width 100%
+
+ul.menu > li:nth-child(2)
+  @media (max-width: 768px)
+    flex-wrap wrap
+
+ul.menu > li > a
+  display block
+  padding 10px
+  color #fff
+  text-decoration none
+  &:hover
+    border-top 1px solid rgb(239, 239, 239)
+    box-sizing border-box
+
+
+
+.menu__all
+  border-bottom 1px solid #fff
+  @media (max-width: 768px)
+    border none
+
+ul.submenu
+  display none;
+  position absolute
+  top 37px
+  left 0
+  width 220px
+  @media (max-width: 768px)
+    display block
+    position initial
+    width 100%
+    margin -15px 0 0 0px
+
+
+ul.submenu > li
+  display block
+
+ul.submenu > li:last-child
+  border none
+
+
+.submenu-all
+  background-color #4b676d
+  top 39px!important
+
+
+.submenu-all a
+  width 220px
+
+ul.submenu > li > a
+  display block
+  padding 5px 1px 5px 10px
+  color #fff
+  text-decoration none
+  @media (max-width: 768px)
+    &:after
+      content ""
+      width 20px
+      height 1px
+      background-color #fff
+      display block
+      margin 6px auto 4px auto
+    padding 0
+    font-size 8px
+    width 280px
+    margin 0 auto
+
+ul.submenu > li:last-child > a
+  @media (max-width: 768px)
+    &:after
+      display none
+
+
+ul.submenu > li > a:hover
+  text-decoration underline
+
+
+ul.menu > li:hover > ul.submenu
+  display: block
+
+
+.menu
+  @media (max-width: 768px)
+    right 100%
+    height 100%
+    position fixed
+    width 100%
+    z-index 12
+    top 0
+    background-color #4b676e
+    margin 0
+    display flex
+    flex-direction column
+    justify-content space-around
+    align-items center

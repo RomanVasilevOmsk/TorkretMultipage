@@ -1,0 +1,46 @@
+<section class="main-screen">
+    <div class="main-screen__inner">
+        <div class="main-screen__wrapper">
+            <div class="main-screen__subtitle">
+                <span class="white-collor">ГОТОВЫЕ ТОРКРЕТ СМЕСИ<br>
+ОТ 10 000 Р. ЗА ТОННУ</span>
+                <!-- <span class="white-collor">Сэкономьте до 40%<br> на закупке сухих ремонтных <br>и подливочных смесей</span> -->
+            </div>
+
+            <div class="main-screen__small-sub">
+                СЭКОНОМЬТЕ ДО 30% ОТ ЦЕНЫ ЗА СЧЕТ ЗАКУПА<br>
+                НАПРЯМУЮ У ПРОИЗВОДИТЕЛЯ
+            </div>
+            <div class="main-form">
+                <div class="form-container">
+                    <div class="main-form__title">
+                        закажите расчет цен  на<br><!--на -->
+                        <span class="main-form__title-red"><?= changeTitle(); ?></span>
+                    </div>
+                    <div class="main-form__will-call">
+                        <!-- Перезвоним в течение 15 минут! -->
+                        <?= timeUtm();?>
+                    </div>
+
+                    <form action="succes.php" method="post">
+                        <input class="main-form__phone" type="text" name="phone" required="" placeholder="Введите ваш телефон">
+                        <button class="main-form__button" type="submit">получить расчет цен</button>
+                        <input type="hidden" name="forma" value="Главный экран">
+                        <input type="hidden" name="order_type" value="2">
+                        <input type="hidden" name="utm_source" value="<?php echo isset($_GET['utm_source']) ? $_GET['utm_source'] : '' ;?>">
+                        <input type="hidden" name="utm_medium" value="<?php echo isset($_GET['utm_medium']) ? $_GET['utm_medium'] : '' ;?>">
+                        <input type="hidden" name="utm_campaign" value="<?php echo isset($_GET['utm_campaign']) ? $_GET['utm_campaign'] : '' ;?>">
+                        <input type="hidden" name="utm_term" value="<?php echo isset($_GET['utm_term']) ? $_GET['utm_term'] : '' ;?>">
+                        <input type="hidden" name="utm_placement" value="<?php echo isset($_GET['utm_placement']) ? $_GET['utm_placement'] : '' ;?>">
+                        <input type="hidden" name="utm_creative" value="<?php echo isset($_GET['utm_creative']) ? $_GET['utm_creative'] : '' ;?>">
+                        <input type="hidden" name="utm_content" value="<?php echo isset($_GET['utm_content']) ? $_GET['utm_content'] : '' ;?>">
+                        <input type="hidden" value="8838" name="time_spend"><input type="hidden" value="false" name="mobile">
+                    </form>
+                    <p class='main-form__onion'>Нажимая на кнопку, я даю <a href="soglashenie.pdf" target="_blank" class="main-form__link">cогласие на обработку персональных данных</a></p>
+                </div>
+        </div>
+
+
+        <!--<a class="button button-application button-application&#45;&#45;arrow hvr-hang " id="jsArrowLink" href="#js-application"></a>-->
+    </div>
+</section>
